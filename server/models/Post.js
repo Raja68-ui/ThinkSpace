@@ -38,7 +38,7 @@ const PostSchema = new mongoose.Schema({
     },
     reason: {
       type: String,
-      enum: ['Spam', 'Violence', 'Hatred', 'Other'],
+      enum: ['Spam', 'Violence', 'Hatred', 'Inappropriate Language', 'Other'],
       default: 'Other'
     }
   }]

@@ -44,6 +44,8 @@ router.get('/:id', async (req, res) => {
 const path = require('path');
 const multer = require('multer');
 const fs = require('fs');
+const Filter = require('bad-words');
+const filter = new Filter();
 
 const uploadDir = 'uploads/';
 if (!fs.existsSync(uploadDir)){
@@ -77,6 +79,10 @@ router.post('/', auth, upload.single('image'), async (req, res) => {
       author: req.user.id,
       imageUrl: req.file ? `/uploads/${req.file.filename}` : ""
     });
+
+    if (filter.isProfane(title) || filter.isProfane(description)) {
+      newPost.reports = [{ reason: 'Inappropriate Language' }];
+    }
 
     const post = await newPost.save();
     const populatedPost = await Post.findById(post._id).populate('author', 'username');
