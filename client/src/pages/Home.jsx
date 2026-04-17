@@ -176,7 +176,7 @@ const Home = () => {
                 
                 {post.imageUrl && (
                   <div style={{ marginBottom: '1.5rem', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                    <img src={`http://localhost:5001${post.imageUrl}`} alt="Post Media" style={{ width: '100%', maxHeight: '400px', objectFit: 'cover', display: 'block' }} />
+                    <img src={`https://thinkspace-vmy5.onrender.com${post.imageUrl}`} alt="Post Media" style={{ width: '100%', maxHeight: '400px', objectFit: 'cover', display: 'block' }} />
                   </div>
                 )}
 

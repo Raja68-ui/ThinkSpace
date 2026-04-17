@@ -197,7 +197,7 @@ const PostDetails = () => {
         
         {post.imageUrl && (
           <div style={{ margin: '-1rem -1.75rem 2rem -1.75rem', overflow: 'hidden', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-             <img src={`http://localhost:5001${post.imageUrl}`} alt="Post Media" style={{ width: '100%', maxHeight: '500px', objectFit: 'contain', display: 'block', backgroundColor: 'rgba(0,0,0,0.4)' }} />
+             <img src={`https://thinkspace-vmy5.onrender.com${post.imageUrl}`} alt="Post Media" style={{ width: '100%', maxHeight: '500px', objectFit: 'contain', display: 'block', backgroundColor: 'rgba(0,0,0,0.4)' }} />
           </div>
         )}
 
